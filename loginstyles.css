@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/Hotel Pics/landingpage1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+label {
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+form {
+    background-color: #005da9;
+    padding: 30px;
+    border-radius: 25px;
+}
+
+#username,
+#userpass,
+#userrole {
+    height: 40px;
+    width: 400px;
+}
+
+#loginbtn {
+    height: 50px;
+    width: 150px;
+    padding: 10px 10px 45px 10px;
+    background-color: #00d4d4;
+    border-radius: 25px;
+    color: black;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: hidden;
+}
+
+img {
+    width: 397px;
+    display: block;
+    margin: auto;
+}

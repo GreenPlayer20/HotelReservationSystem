@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <link rel="stylesheet" href="loginstyles.css" />
+        <script src="scripts.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <form id="LoginForm">
+                <div id="loginname">
+                    <img src="images/Hotel Pics/Google login.png" alt="Google Login Icon" />
+                    <p style="margin-top: 1em; margin-bottom: 0.5em"><label for="username">Username:</label></p>
+                    <input type="text" id="username" name="username" placeholder="Username" />
+                </div>
+
+                <p style="margin-top: 1em; margin-bottom: 0.5em"></p>
+
+                <div id="userpassword">
+                    <p style="margin-top: 1em; margin-bottom: 0.5em"><label for="userpass">Password:</label></p>
+                    <input type="password" id="userpass" name="userpass" placeholder="Password" />
+                </div>
+
+                <p style="margin-top: 1em; margin-bottom: 0.5em"></p>
+
+                <div>
+                    <p style="margin-top: 1em; margin-bottom: 0.5em"><label for="userrole">Role:</label></p>
+                    <select name="Role" id="userrole">
+                        <option value="Admin">Admin</option>
+                        <option value="Customer">Customer</option>
+                        <option value="Front-Desk">Front-Desk</option>
+                    </select>
+                </div>
+
+                <div style="text-align: center; margin-top: 1.5em">
+                    <button type="button" id="loginbtn">Login</button>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

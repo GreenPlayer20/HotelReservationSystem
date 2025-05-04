@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="Styles.css" />
+        <title>Front-Desk Dashboard</title>
+        <script src="scripts.js" defer></script>
+    </head>
+    <body class="fd-dashboard">
+        <div id="dash1">
+            <button type="button" role="button" id="fddashbtn">Dashboard</button>
+            <button type="button" role="button" id="fdroombtn">Rooms</button>
+            <button type="button" role="button" id="fdresbtn">Reservations</button>
+            <div class="profile">
+                <button type="button" role="button" id="fdiconbtn">
+                    <img src="images/Hotel Pics/ProfileIcon.png" width="55" height="55" />
+                </button>
+                <div class="options">
+                    <a href="">Account Settings</a>
+                    <a href="">Informations</a>
+                    <a href="index.html">Sign Out</a>
+                </div>
+            </div>
+            <div class="rectangle"></div>
+        </div>
+        <div class="container">
+            <div class="card top-card">
+                <div>
+                    <h2>14</h2>
+                    <p>Arrivals</p>
+                </div>
+                <div>
+                    <h2>16</h2>
+                    <p>Departures</p>
+                </div>
+                <div>
+                    <h2>10</h2>
+                    <p>New Bookings</p>
+                </div>
+                <div>
+                    <h2>4</h2>
+                    <p>Stay Overs</p>
+                </div>
+                <div>
+                    <h2>7</h2>
+                    <p>Cancellations</p>
+                </div>
+            </div>
+            <div class="card chart-section">
+                <h3>ROOMS</h3>
+                <div class="chart">200</div>
+                <div class="legend">
+                    <span><i style="background: #1e90ff"></i> 84 Available Rooms</span>
+                    <span><i style="background: #00ced1"></i> 51 Booked Rooms</span>
+                    <span><i style="background: #87cefa"></i> 65 Unavailable Rooms</span>
+                </div>
+            </div>
+            <div class="card res-section">
+                <h3>RESERVATIONS</h3>
+                <div class="guests">
+                    <div>
+                        <p>Guest 1</p>
+                        <img src="images/Hotel Pics/room one king bed.jpeg" alt="Guest 1" />
+                    </div>
+                    <div>
+                        <p>Guest 2</p>
+                        <img src="images/Hotel Pics/roomwithtwobeds.png" alt="Guest 2" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

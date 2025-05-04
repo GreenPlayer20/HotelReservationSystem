@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Admin Reports</title>
+        <link rel="stylesheet" href="Styles.css" />
+        <style>
+            .rectangle {
+                height: 5px;
+                width: 240px;
+                background-color: #5f8cff;
+                position: absolute;
+                bottom: 0;
+
+                left: 720px;
+            }
+
+            body {
+                font-family: sans-serif;
+
+                display: flex;
+                gap: 20px;
+                padding: 20px;
+                background-color: #f4f4f4;
+
+                align-items: flex-start;
+            }
+
+            .container {
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                margin-top: 130px;
+            }
+
+            .performance-overview {
+                width: 250px;
+                text-align: center;
+            }
+
+            .performance-overview h2 {
+                font-size: 1.5em;
+                margin-bottom: 20px;
+            }
+
+            .reservations-data {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                margin-bottom: 20px;
+            }
+
+            .data-item {
+                text-align: center;
+            }
+
+            .data-item strong {
+                font-size: 1.8em;
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .cancellations {
+                text-align: center;
+            }
+
+            .cancellations strong {
+                font-size: 1.8em;
+                display: block;
+                margin-bottom: 5px;
+                color: #e74c3c;
+            }
+
+            .reservation-graph {
+                width: 400px;
+            }
+
+            .graph-title {
+                text-align: center;
+                margin-bottom: 10px;
+                font-size: 1.1em;
+                color: #555;
+            }
+
+            .bar-chart {
+                position: relative;
+                height: 200px;
+                width: 100%;
+                border-left: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 20px;
+
+                overflow: hidden;
+            }
+
+            .bar {
+                position: absolute;
+                bottom: 0;
+                width: calc(100% / 6 - 10px);
+                margin-left: 5px;
+            }
+
+            .bar-label {
+                position: absolute;
+                bottom: -18px;
+                width: calc(100% / 6);
+                text-align: center;
+                font-size: 0.8em;
+                color: #333;
+            }
+
+            .legend {
+                margin-top: 15px;
+                text-align: center;
+                font-size: 0.9em;
+                color: #777;
+            }
+
+            .legend-item {
+                display: inline-block;
+                margin: 0 10px;
+            }
+
+            .legend-color {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                margin-right: 5px;
+            }
+        </style>
+        <script src="scripts.js" defer></script>
+    </head>
+    <body>
+        <div id="dash1">
+            <button type="button" id="dashbtn">Dashboard</button>
+            <button type="button" id="roombtn">Rooms</button>
+            <button type="button" id="resbtn">Reservations</button>
+            <button type="button" id="repbtn">Reports</button>
+            <div class="profile">
+                <button type="button" id="iconbtn">
+                    <img src="images/Hotel Pics/ProfileIcon.png" width="55" height="55" alt="Profile Icon" />
+                </button>
+                <div class="options">
+                    <a href="">Account Settings</a>
+                    <a href="">Informations</a>
+                    <a href="index.html">Sign Out</a>
+                </div>
+            </div>
+            <div class="rectangle"></div>
+        </div>
+
+        <main style="display: flex; gap: 20px; padding: 20px; background-color: #f4f4f4">
+            <div class="container performance-overview">
+                <h2>Performance</h2>
+                <div class="reservations-data">
+                    <div class="data-item">
+                        <strong>14</strong>
+                        Arrivals
+                    </div>
+                    <div class="data-item">
+                        <strong>16</strong>
+                        Departures
+                    </div>
+                    <div class="data-item">
+                        <strong>10</strong>
+                        New Bookings
+                    </div>
+                    <div class="data-item">
+                        <strong>4</strong>
+                        Stay Overs
+                    </div>
+                </div>
+                <div class="cancellations">
+                    <strong>7</strong>
+                    Cancellations
+                </div>
+            </div>
+
+            <div class="container reservation-graph">
+                <div class="graph-title">Reservation Graph</div>
+                <div class="bar-chart">
+                    <div
+                        class="bar"
+                        style="left: calc(0 * 100% / 6 + 5px); height: 30%; background-color: #d8b2d8"></div>
+                    <div
+                        class="bar"
+                        style="left: calc(1 * 100% / 6 + 5px); height: 20%; background-color: #ffda63"></div>
+                    <div
+                        class="bar"
+                        style="left: calc(2 * 100% / 6 + 5px); height: 70%; background-color: #9494e6"></div>
+                    <div
+                        class="bar"
+                        style="left: calc(3 * 100% / 6 + 5px); height: 40%; background-color: #a569bd"></div>
+                    <div
+                        class="bar"
+                        style="left: calc(4 * 100% / 6 + 5px); height: 90%; background-color: #f4a261"></div>
+                    <div
+                        class="bar"
+                        style="left: calc(5 * 100% / 6 + 5px); height: 65%; background-color: #2ec4b6"></div>
+
+                    <div class="bar-label" style="left: calc(0 * 100% / 6)">January</div>
+                    <div class="bar-label" style="left: calc(1 * 100% / 6)">February</div>
+                    <div class="bar-label" style="left: calc(2 * 100% / 6)">March</div>
+                    <div class="bar-label" style="left: calc(3 * 100% / 6)">April</div>
+                    <div class="bar-label" style="left: calc(4 * 100% / 6)">May</div>
+                    <div class="bar-label" style="left: calc(5 * 100% / 6)">June</div>
+                </div>
+                <div class="legend">
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #d8b2d8"></span> January
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #ffda63"></span> February
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #9494e6"></span> March
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #a569bd"></span> April
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #f4a261"></span> May
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #2ec4b6"></span> June
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Customer Dashboard</title>
+        <link rel="stylesheet" href="Styles.css" />
+        <style>
+            .rectangle {
+                height: 5px;
+                width: 260px;
+                background-color: #5f8cff;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+            body {
+                font-family: sans-serif;
+
+                padding: 20px;
+                background-color: #f4f4f4;
+
+                align-items: flex-start;
+            }
+
+            .main-content-flex {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+                margin-top: 110px;
+                width: 100%;
+            }
+
+            .card {
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                width: 300px;
+                left: 0;
+                text-align: center;
+            }
+
+            .card-title {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+                color: #333;
+            }
+
+            .room-type {
+                font-size: 1em;
+                margin-bottom: 15px;
+                color: #555;
+            }
+
+            .room-image-container {
+                width: 100%;
+                max-height: 200px;
+                overflow: hidden;
+                border-radius: 6px;
+                margin-bottom: 15px;
+            }
+
+            .room-image {
+                width: 100%;
+                display: block;
+                height: auto;
+                object-fit: cover;
+            }
+
+            .rating {
+                font-size: 1.5em;
+                color: #ffc107;
+                margin-bottom: 15px;
+            }
+
+            .comment-section {
+                text-align: left;
+            }
+
+            .comment-label {
+                font-size: 0.9em;
+                color: #777;
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .comment-input {
+                width: calc(100% - 16px);
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+            }
+
+            .status {
+                font-weight: bold;
+                margin-top: 15px;
+            }
+
+            .status-pending {
+                color: #e74c3c;
+            }
+        </style>
+        <script src="scripts.js" defer></script>
+    </head>
+    <body>
+        <div id="dash1">
+            <button type="button" id="cusdashbtn">Dashboard</button>
+            <button type="button" id="cusroombtn">Rooms</button>
+            <button type="button" id="cusresbtn">Reservations</button>
+            <div class="profile">
+                <button type="button" id="iconbtn">
+                    <img src="images/Hotel Pics/ProfileIcon.png" width="55" height="55" alt="Profile Icon" />
+                </button>
+                <div class="options">
+                    <a href="">Account Settings</a>
+                    <a href="">Informations</a>
+                    <a href="index.html">Sign Out</a>
+                </div>
+            </div>
+            <div class="rectangle"></div>
+        </div>
+
+        <main class="main-content-flex">
+            <div class="card">
+                <h2 class="card-title">Most Recent Room</h2>
+                <p class="room-type">Room With One King Bed</p>
+                <div class="room-image-container">
+                    <img
+                        src="images/Hotel Pics/room one king bed.jpeg"
+                        alt="Room with One King Bed"
+                        class="room-image" />
+                </div>
+                <div class="rating">☆☆☆☆☆</div>
+                <div class="comment-section">
+                    <label for="comment" class="comment-label">Leave a comment</label>
+                    <input type="text" id="comment" class="comment-input" />
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">Your Reservation</h2>
+                <p class="room-type">Room With One King Bed</p>
+                <div class="room-image-container">
+                    <img
+                        src="images/Hotel Pics/room one king bed.jpeg"
+                        alt="Room with One King Bed"
+                        class="room-image" />
+                </div>
+                <p class="status status-pending">Status: Pending</p>
+            </div>
+        </main>
+    </body>
+</html>

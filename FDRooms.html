@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="Styles.css" />
+        <title>Front-Desk Rooms</title>
+        <script src="scripts.js" defer></script>
+    </head>
+    <body class="fd-rooms">
+        <div id="dash1">
+            <button type="button" role="button" id="fddashbtn">Dashboard</button>
+            <button type="button" role="button" id="fdroombtn">Rooms</button>
+            <button type="button" role="button" id="fdresbtn">Reservations</button>
+            <div class="profile">
+                <button type="button" role="button" id="fdiconbtn">
+                    <img src="images/Hotel Pics/ProfileIcon.png" width="55" height="55" />
+                </button>
+                <div class="options">
+                    <a href="">Account Settings</a>
+                    <a href="">Informations</a>
+                    <a href="index.html">Sign Out</a>
+                </div>
+            </div>
+            <div class="rectangle"></div>
+        </div>
+        <div class="header">
+            <h1>Rooms</h1>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search Rooms" />
+                <button class="search-button">
+                    <img src="images/Hotel Pics/searchicon.png" class="search-button" id="searchicon" />
+                </button>
+            </div>
+        </div>
+        <div class="rooms-container">
+            <div class="room-card">
+                <h2 class="room-title">Room With One King Bed</h2>
+                <div class="room-image-container">
+                    <img
+                        src="images/Hotel Pics/room one king bed.jpeg"
+                        alt="Room with One King Bed"
+                        class="room-image" />
+                </div>
+            </div>
+            <div class="room-card">
+                <h2 class="room-title">Room With Two Beds</h2>
+                <div class="room-image-container">
+                    <img src="images/Hotel Pics/roomwithtwobeds.png" alt="Room with Two Beds" class="room-image" />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

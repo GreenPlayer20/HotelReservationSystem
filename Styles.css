@@ -1,0 +1,919 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 30px;
+}
+
+/* Styles for Index.html */
+body.landing-page {
+  background-image: url("images/Hotel Pics/landingpage1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+#div1 {
+  background-color: #005da9;
+  padding: 15px;
+  position: absolute;
+  height: 70px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  float: left;
+}
+
+#div2 {
+  background-color: #005da9;
+  padding: 15px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: max-content;
+  float: right;
+}
+
+#lanh1 {
+  color: white;
+  padding: 0 10px;
+  font-family: Georgia;
+}
+
+#btn1 {
+  background-color: #005da9;
+  color: white;
+  padding: 0 10px;
+  font-size: 33px;
+  font-family: Georgia;
+  border: hidden;
+}
+
+#dash1 {
+  background-color: #c0edf4;
+  padding: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  float: left;
+}
+
+#dash1 button {
+  background-color: #c0edf4;
+  padding: 0 50px;
+  color: black;
+  font-size: 33px;
+  font-family: TimesNewRoman;
+  border: hidden;
+}
+
+.profile {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right: 50px;
+  padding-top: 10px;
+}
+
+.profile img {
+  width: 55px;
+  height: 55px;
+}
+
+.profile .options {
+  display: none;
+  background-color: #a9f3f3;
+  position: absolute;
+  min-width: 100px;
+  top: 69px;
+  right: 40px;
+  z-index: 1;
+}
+
+.profile .options a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  font-size: larger;
+  font-family: TimesNewRoman;
+}
+
+.profile:hover .options {
+  display: block;
+}
+
+.rectangle {
+  height: 5px;
+  background-color: #5f8cff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.admin-dashboard .rectangle {
+  width: 260px;
+  left: 0;
+}
+
+.admin-dashboard .container {
+  margin-top: 130px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-card {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.top-card h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.top-card p {
+  margin: 5px 0 0;
+  color: gray;
+  font-size: 14px;
+}
+
+.chart-section {
+  text-align: center;
+}
+
+.chart {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(#1e90ff 0% 42%, #00ced1 42% 68%, #87cefa 68% 100%);
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.legend {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+}
+
+.legend i {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-right: 6px;
+  border-radius: 50%;
+}
+
+.res-section {
+  text-align: center;
+}
+
+.res-section img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.guests {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.admin-reports .rectangle {
+  width: 240px;
+  left: 720px;
+}
+
+.admin-reports body {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.admin-reports .container {
+  margin-top: 130px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.performance-overview {
+  width: 250px;
+  text-align: center;
+}
+
+.performance-overview h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.reservations-data {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.data-item {
+  text-align: center;
+}
+
+.data-item strong {
+  font-size: 1.8em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.cancellations {
+  text-align: center;
+}
+
+.cancellations strong {
+  font-size: 1.8em;
+  display: block;
+  margin-bottom: 5px;
+  color: #e74c3c;
+}
+
+.reservation-graph {
+  width: 400px;
+}
+
+.graph-title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.bar-chart {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.bar {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% / 6 - 10px);
+  margin-left: 5px;
+}
+
+.bar-label {
+  position: absolute;
+  bottom: -18px;
+  width: calc(100% / 6);
+  text-align: center;
+  font-size: 0.8em;
+  color: #333;
+}
+
+.admin-reports .legend {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #777;
+}
+
+.legend-item {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.admin-reservations .rectangle {
+  width: 260px;
+  left: 460px;
+}
+
+.admin-reservations body {
+  padding: 30px;
+  background-color: #f9f9f9;
+}
+
+.admin-reservations .container {
+  margin-top: 130px;
+}
+
+.admin-reservations h2 {
+  margin-bottom: 20px;
+}
+
+.res-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.res-card {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  position: relative;
+}
+
+.res-info {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 70%;
+}
+
+.res-img img {
+  width: 120px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.process-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: #5f8cff;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content button {
+  margin: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.approve-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+}
+
+.admin-rooms .rectangle {
+  width: 200px;
+  left: 260px;
+}
+
+.admin-rooms body {
+  padding: 30px;
+  background-color: #f9f9f9;
+}
+
+.admin-rooms .container {
+  margin-top: 130px;
+}
+
+.rooms-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.rooms-header h2 {
+  margin: 0;
+}
+
+.add-room-btn {
+  padding: 10px 15px;
+  background-color: #adc8ff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.room-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.room-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  width: 250px;
+}
+
+.room-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
+.modal-content form input {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-content button[type="submit"] {
+  background-color: #5f8cff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #4169e1;
+}
+
+.customer-dashboard .rectangle {
+  width: 260px;
+  left: 0;
+}
+
+.customer-dashboard body {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.customer-dashboard .card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.room-type {
+  font-size: 1em;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.room-image-container {
+  width: 100%;
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.room-image {
+  width: 100%;
+  display: block;
+}
+
+.rating {
+  font-size: 1.5em;
+  color: #ffc107;
+  margin-bottom: 15px;
+}
+
+.comment-section {
+  text-align: left;
+}
+
+.comment-label {
+  font-size: 0.9em;
+  color: #777;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.comment-input {
+  width: calc(100% - 16px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.status {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.status-pending {
+  color: #e74c3c;
+}
+
+.customer-reservations .rectangle {
+  width: 260px;
+  left: 460px;
+}
+
+.customer-reservations body {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.customer-reservations .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 150px;
+}
+
+.customer-reservations h1 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.reservation-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 15px;
+  text-align: center;
+}
+
+.reservation-card .room-image-container {
+  max-height: 180px;
+}
+
+.customer-rooms .rectangle {
+  width: 200px;
+  left: 260px;
+}
+
+.customer-rooms body {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 150px;
+}
+
+.header h1 {
+  font-size: 2em;
+  color: #333;
+  margin: 0;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+  border-radius: 25px;
+  padding: 8px 15px;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  padding: 8px;
+  width: 150px;
+  outline: none;
+  color: #555;
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  height: 20px;
+  width: 20px;
+  position: relative;
+}
+
+.search-icon {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.rooms-container {
+  display: flex;
+  gap: 20px;
+}
+
+.room-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.room-card:hover {
+  transform: scale(1.02);
+}
+
+.room-title {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.room-image-container {
+  width: 100%;
+  max-height: 180px;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.room-image {
+  width: 100%;
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.modal-content p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  border: none;
+  background-color: #5f8cff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content .close-btn {
+  background-color: #ccc;
+  margin-left: 10px;
+}
+
+.payment-form {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+}
+
+.fd-dashboard .rectangle {
+  width: 260px;
+  left: 0;
+}
+
+.fd-dashboard .container {
+  margin-top: 130px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.fd-reservations .rectangle {
+  width: 260px;
+  left: 460px;
+}
+
+.fd-reservations body {
+  padding: 30px;
+  background-color: #f9f9f9;
+}
+
+.fd-reservations .container {
+  margin-top: 130px;
+}
+
+.fd-reservations h2 {
+  margin-bottom: 20px;
+}
+
+.fd-rooms .rectangle {
+  width: 200px;
+  left: 260px;
+}
+
+.fd-rooms body {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+#iconbtn {
+  position: absolute;
+  right: 0;
+}
+
+#deleteConfirmModal .modal-content {
+  max-width: 350px;
+}
+
+#deleteConfirmModal .modal-content p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+#deleteConfirmModal .modal-content button {
+  margin: 0 10px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#deleteConfirmModal .approve-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#deleteConfirmModal .cancel-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+#deleteConfirmModal .approve-btn:hover {
+  background-color: #c0392b;
+}
+
+#deleteConfirmModal .cancel-btn:hover {
+  background-color: #bbb;
+}

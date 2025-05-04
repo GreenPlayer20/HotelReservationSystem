@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="Styles.css" />
+        <title>Front-Desk Reservations</title>
+        <script src="scripts.js" defer></script>
+    </head>
+    <body class="fd-reservations">
+        <div id="dash1">
+            <button type="button" role="button" id="fddashbtn">Dashboard</button>
+            <button type="button" role="button" id="fdroombtn">Rooms</button>
+            <button type="button" role="button" id="fdresbtn">Reservations</button>
+            <div class="profile">
+                <button type="button" role="button" id="fdiconbtn">
+                    <img src="images/Hotel Pics/ProfileIcon.png" width="55" height="55" />
+                </button>
+                <div class="options">
+                    <a href="">Account Settings</a>
+                    <a href="">Informations</a>
+                    <a href="index.html">Sign Out</a>
+                </div>
+            </div>
+            <div class="rectangle"></div>
+        </div>
+        <div class="container">
+            <h2>Reservations</h2>
+            <div class="res-grid" id="reservationGrid">
+                <div class="res-card" data-id="52178562">
+                    <div class="res-info">
+                        <strong>Name:</strong> John Smith<br />
+                        <strong>Phone:</strong> 1234-567-8910<br />
+                        <strong>Reservation:</strong> Room With One King Bed<br />
+                        <strong>Date:</strong> March 21 - March 23<br />
+                        <strong>Reservation ID:</strong> 52178562
+                    </div>
+                    <div class="res-img">
+                        <img src="images/Hotel Pics/room one king bed.jpeg" alt="King Bed" />
+                    </div>
+                    <button class="process-btn">Process</button>
+                </div>
+                <div class="res-card" data-id="52178562">
+                    <div class="res-info">
+                        <strong>Name:</strong> Harry Arton<br />
+                        <strong>Phone:</strong> 1234-567-8910<br />
+                        <strong>Reservation:</strong> Room With Two Beds<br />
+                        <strong>Date:</strong> March 12 - March 15<br />
+                        <strong>Reservation ID:</strong> 52321548
+                    </div>
+                    <div class="res-img">
+                        <img src="images/Hotel Pics/roomwithtwobeds.png" alt="King Bed" />
+                    </div>
+                    <button class="process-btn">Process</button>
+                </div>
+                <div class="res-card" data-id="52178562">
+                    <div class="res-info">
+                        <strong>Name:</strong> Ken Martin<br />
+                        <strong>Phone:</strong> 1234-567-8910<br />
+                        <strong>Reservation:</strong> Room With One King Bed<br />
+                        <strong>Date:</strong> March 24 - March 28<br />
+                        <strong>Reservation ID:</strong> 87655423
+                    </div>
+                    <div class="res-img">
+                        <img src="images/Hotel Pics/roomwithtwobeds.png" alt="King Bed" />
+                    </div>
+                    <button class="process-btn">Process</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="processModal">
+            <div class="modal-content">
+                <p>Approve this reservation?</p>
+                <button class="approve-btn" onclick="confirmApproval()">Approve</button>
+                <button class="cancel-btn" onclick="closeModal('processModal')">Cancel</button>
+            </div>
+        </div>
+    </body>
+</html>

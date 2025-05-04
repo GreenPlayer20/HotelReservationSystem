@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Admin Dashboard</title>
+        <link rel="stylesheet" href="Styles.css" />
+        <style>
+            .rectangle {
+                height: 5px;
+                width: 260px;
+                background-color: #5f8cff;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                margin: 30px;
+                background-color: #f4f4f4;
+            }
+            .container {
+                margin-top: 130px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px;
+            }
+            .card {
+                background: white;
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .top-card {
+                grid-column: span 2;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+            }
+            .top-card div h2 {
+                margin: 0;
+                font-size: 28px;
+            }
+            .top-card div p {
+                margin: 5px 0 0;
+                color: gray;
+                font-size: 14px;
+            }
+
+            .chart-section {
+                text-align: center;
+            }
+
+            .chart {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background: conic-gradient(#1e90ff 0% 42%, #00ced1 42% 68%, #87cefa 68% 100%);
+                margin: 0 auto 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #333;
+                font-weight: bold;
+                font-size: 24px;
+            }
+
+            .legend {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 10px;
+                font-size: 14px;
+            }
+            .legend span {
+                display: flex;
+                align-items: center;
+            }
+            .legend i {
+                width: 10px;
+                height: 10px;
+                display: inline-block;
+                margin-right: 6px;
+                border-radius: 50%;
+            }
+
+            .res-section {
+                text-align: center;
+            }
+
+            .res-section img {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+                margin: 10px;
+            }
+
+            .guests {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+            }
+        </style>
+        <script src="scripts.js" defer></script>
+    </head>
+    <body>
+        <div id="dash1">
+            <button type="button" id="dashbtn">Dashboard</button>
+            <button type="button" id="roombtn">Rooms</button>
+            <button type="button" id="resbtn">Reservations</button>
+            <button type="button" id="repbtn">Reports</button>
+
+            <div class="profile">
+                <button type="button" id="iconbtn">
+                    <img src="images/Hotel Pics/ProfileIcon.png" width="55" height="55" alt="Profile Icon" />
+                </button>
+                <div class="options">
+                    <a href="">Account Settings</a>
+                    <a href="">Informations</a>
+                    <a href="index.html">Sign Out</a>
+                </div>
+            </div>
+            <div class="rectangle"></div>
+        </div>
+
+        <main>
+            <div class="container">
+                <div class="card top-card">
+                    <div>
+                        <h2>14</h2>
+                        <p>Arrivals</p>
+                    </div>
+                    <div>
+                        <h2>16</h2>
+                        <p>Departures</p>
+                    </div>
+                    <div>
+                        <h2>10</h2>
+                        <p>New Bookings</p>
+                    </div>
+                    <div>
+                        <h2>4</h2>
+                        <p>Stay Overs</p>
+                    </div>
+                    <div>
+                        <h2>7</h2>
+                        <p>Cancellations</p>
+                    </div>
+                </div>
+
+                <div class="card chart-section">
+                    <h3>ROOMS</h3>
+                    <div class="chart">200</div>
+                    <div class="legend">
+                        <span><i style="background: #1e90ff"></i> 84 Available Rooms</span>
+                        <span><i style="background: #00ced1"></i> 51 Booked Rooms</span>
+                        <span><i style="background: #87cefa"></i> 65 Unavailable Rooms</span>
+                    </div>
+                </div>
+
+                <div class="card res-section">
+                    <h3>RESERVATIONS</h3>
+                    <div class="guests">
+                        <div>
+                            <p>Guest 1</p>
+                            <img src="images/Hotel Pics/room one king bed.jpeg" alt="Room with One King Bed" />
+                        </div>
+                        <div>
+                            <p>Guest 2</p>
+                            <img src="images/Hotel Pics/roomwithtwobeds.png" alt="Room with Two Beds" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="Styles.css" />
+        <title>Customer Rooms</title>
+        <script src="scripts.js" defer></script>
+    </head>
+    <body class="customer-rooms">
+        <div id="dash1">
+            <button type="button" role="button" id="cusdashbtn">Dashboard</button>
+            <button type="button" role="button" id="cusroombtn">Rooms</button>
+            <button type="button" role="button" id="cusresbtn">Reservations</button>
+            <div class="profile">
+                <button type="button" role="button" id="cusiconbtn">
+                    <img src="images/Hotel Pics/ProfileIcon.png" width="55" height="55" />
+                </button>
+                <div class="options">
+                    <a href="">Account Settings</a>
+                    <a href="">Informations</a>
+                    <a href="index.html">Sign Out</a>
+                </div>
+            </div>
+            <div class="rectangle"></div>
+        </div>
+        <div class="header">
+            <h1>Rooms</h1>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search Rooms" />
+                <button class="search-button">
+                    <img src="images/Hotel Pics/searchicon.png" class="search-button" id="searchicon" />
+                </button>
+            </div>
+        </div>
+        <div class="rooms-container">
+            <div class="room-card" onclick="showRoomDetails('Room With One King Bed', 'R101', 120)">
+                <h2 class="room-title">Room With One King Bed</h2>
+                <div class="room-image-container">
+                    <img
+                        src="images/Hotel Pics/room one king bed.jpeg"
+                        alt="Room with One King Bed"
+                        class="room-image" />
+                </div>
+            </div>
+            <div class="room-card" onclick="showRoomDetails('Room With Two Beds', 'R102', 150)">
+                <h2 class="room-title">Room With Two Beds</h2>
+                <div class="room-image-container">
+                    <img src="images/Hotel Pics/roomwithtwobeds.png" alt="Room with Two Beds" class="room-image" />
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="roomModal">
+            <div class="modal-content">
+                <h3 id="modalRoomName"></h3>
+                <p><strong>Room ID:</strong> <span id="modalRoomID"></span></p>
+                <p><strong>Price per Night:</strong> $<span id="modalRoomPrice"></span></p>
+                <div class="payment-form">
+                    <h4>Payment Information</h4>
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="cardName">Name on Card</label>
+                        <input type="text" id="cardName" placeholder="Full Name" required />
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input type="text" id="expiryDate" placeholder="MM/YY" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="123" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <button onclick="processReservation()">Reserve & Pay</button>
+                    <button class="close-btn" onclick="closeModal('roomModal')">Close</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="messageModal">
+            <div class="modal-content">
+                <h3 id="messageModalTitle"></h3>
+                <p id="messageModalText"></p>
+                <button onclick="closeModal('messageModal')">OK</button>
+            </div>
+        </div>
+    </body>
+</html>
